@@ -2,14 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>delei-interview-spring-boot</artifactId>
+    <artifactId>smart-doc-run</artifactId>
     <packaging>jar</packaging>
-    <name>delei-interview-spring-boot</name>
-    <description>Spring Boot</description>
+    <name>smart-doc-run</name>
 
     <parent>
-        <groupId>cn.delei.interview</groupId>
-        <artifactId>delei-interview-root</artifactId>
+        <groupId>cn.delei.smart-doc</groupId>
+        <artifactId>delei-smart-doc-root</artifactId>
         <version>${revision}</version>
     </parent>
 
@@ -21,7 +20,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.1.18.RELEASE</version>
                 <configuration>
-                    <mainClass>cn.delei.spring.boot.GateWayApplication</mainClass>
+                    <mainClass>cn.delei.example.user.Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>
@@ -45,57 +44,34 @@
     </build>
 
     <dependencies>
-        <!--delei-->
         <dependency>
-            <groupId>cn.delei.interview</groupId>
-            <artifactId>delei-interview-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.delei.interview</groupId>
-            <artifactId>delei-interview-spring-boot-starter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!-- Spring -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+            <groupId>cn.delei.smart-doc</groupId>
+            <artifactId>smart-doc</artifactId>
+            <version>${revision}</version>
         </dependency>
 
-        <!-- mysql -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>cn.delei.smart-doc</groupId>
+            <artifactId>smart-doc-example-module-user</artifactId>
+            <version>${revision}</version>
         </dependency>
 
-        <!-- 便于可执行jar源码阅读 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-loader</artifactId>
-            <scope>provided</scope>
+            <groupId>cn.delei.smart-doc</groupId>
+            <artifactId>smart-doc-example-module-department</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.delei.smart-doc</groupId>
+            <artifactId>smart-doc-example-module-role</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.delei.smart-doc</groupId>
+            <artifactId>smart-doc-example-module-others</artifactId>
+            <version>${revision}</version>
         </dependency>
     </dependencies>
 </project>

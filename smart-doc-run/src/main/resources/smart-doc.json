@@ -1,0 +1,21 @@
+{
+  "serverUrl": "http://127.0.0.1",
+  "projectName": "smart-doc-dev",
+  "outPath": "/Users/delei/Desktop/temp/smartdoc/api",
+  "allInOneDocFileName": "index.html",
+  "allInOne": true,
+  "coverOld": true,
+  "createDebugPage": true,
+  "sortByTitle": false,
+  "requestExample": false,
+  "responseExample": false,
+  "requestFieldToUnderline": false,
+  "responseFieldToUnderline": false,
+  "inlineEnum": true,
+  "isStrict": false,
+  "displayActualType": true,
+  "style":"xt256",
+  "showAuthor":true,
+  "framework": "spring",
+  "packageExcludeFilters": ""
+}
